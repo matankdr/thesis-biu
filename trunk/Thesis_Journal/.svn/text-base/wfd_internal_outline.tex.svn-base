@@ -1,0 +1,53 @@
+\begin{algorithm}[htbp]
+\caption{Extract Frontier 2D}
+\label{alg:WavefrontFrontierDetector2}
+\begin{algorithmic}[1]
+
+%\Require{$queue_f$} \Comment{queue, used for extracting a frontier
+%from a given frontier cell} 
+\Require{$p$}
+\Comment{frontier point}
+\Ensure{$NewFrontier$}
+\Comment{extracted frontier which was found starting from $p$}
+
+\Function{Extract-Frontier-2D}{$p$}
+\State{$queue_f \gets \emptyset$}
+		\State{$NewFrontier \gets \emptyset$}
+		\State {\Call {Enqueue}{$queue_f, p$}}
+		\State {mark $p$ as ``Frontier-Open-List''}
+		\Statex{}
+		\While{$queue_f$ if not empty}
+		\label{mark:wfd_start frontier_extraction_bfs}
+			\State{$q \gets$ \Call{Dequeue}{$queue_f$}} 
+			\label{mark:wfd_dequeue_frontier_bfs}
+			
+			
+			\If{ $q$ is marked as one of \{``Map-Close-List'',''Frontier-Close-List''\}}
+				\State{continue}
+			\EndIf 
+						\If{$q$ is a frontier point}
+				\State{add $q$ to $NewFrontier$}
+				\ForAll{$w \in N(q)$} 
+				\Comment{get all neighbors of current frontier point}
+					
+					%YYYY
+					\State{$tags \gets$ \{``Frontier-Open-List'',``Frontier-Close-List'', ``Map-Close-List''\}}
+					\If{$w$ not marked as one of $tags$}
+% 					\If{$w$ not marked as
+% 				one of \{``Frontier-Open-List'',``Frontier-Close-List'', ``Map-Close-List''\}}
+						\State{\Call {Enqueue}{$queue_f,w$}}
+						\label{mark:wfd_enqueue_frontier_bfs}
+						\State{mark $w$ as ``Frontier-Open-List''}
+					\EndIf
+				\EndFor
+			\EndIf 
+			
+			\State{mark $q$ as ``Frontier-Close-List''}
+		\EndWhile 
+		
+%		\State{save data of $NewFrontier$}
+	\State \Return $NewFrontier$
+		\label{mark:wfd_end_of_extraction}
+\EndFunction
+\end{algorithmic}
+\end{algorithm}

@@ -1,0 +1,22 @@
+\input{../Thesis/shapes/definitions}	
+\begin{tikzpicture}[scale=\MyTikzScale,cap=round]
+	  % Local definitions
+	  \def\costhirty{0.8660256}
+	  \def\cosforthyfive{0.7071067811}
+	  % Colors
+	  \colorlet{coscolor}{blue}
+	
+	  % Styles
+	  \tikzstyle{axes}=[]
+	  \tikzstyle{important line}=[very thick]
+	  %\tikzstyle{information text}=[rounded corners,fill=red!10,inner sep=1ex]
+	
+	  % The graphic
+	  %\draw[style=help lines,step=0.5cm] (-1.4,-1.4) grid (1.4,1.4);
+	\createBackground 
+	\draw[line width=1pt,dashed,fill=white] (0,0) circle (1cm);
+	    
+	   \draw[style=important line,coscolor]
+	    (0,0) -- node[right=2pt,fill=none] {$r$}
+	    (0,1);
+	\end{tikzpicture}

@@ -1,0 +1,210 @@
+%% LaTeX Beamer presentation template (requires beamer package)
+%% see http://latex-beamer.sourceforge.net/
+%% idea contributed by H. Turgut Uyar
+%% template based on a template by Till Tantau
+%% this template is still evolving - it might differ in future releases!
+
+\documentclass{beamer}
+
+\mode<presentation>
+{
+%\usetheme{Warsaw} \
+\usetheme{Darmstadt}
+\usecolortheme{dolphin}
+
+\setbeamercovered{transparent}
+}
+
+\usepackage{tikz}
+\usepackage{pgf,pgfarrows,pgfnodes}
+% tikz drawings
+%\usepackage{tikz}
+\usetikzlibrary{matrix,arrows}
+%\usepackage[usenames,dvipsnames]{xcolor}
+% \usepackage[usenames]{xcolor}
+
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
+
+% font definitions, try \usepackage{ae} instead of the following
+% three lines if you don't like this look
+\usepackage{mathptmx}
+\usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+
+\usepackage{subfigure}
+
+\usepackage{xspace}
+
+% cite correctly 
+\usepackage{natbib}
+\newcommand*{\newblock}{}
+
+\usepackage[T1]{fontenc}
+
+\usepackage{datatool}
+
+% for widescreens or projectors, use 16:9 slides
+%\usepackage[orientation=landscape,size=custom,width=16,height=9,scale=0.5,debug]{beamerposter}
+
+\def\FFD{\emph{FFD}\xspace}
+\def\WFD{\emph{WFD}\xspace}
+\def\WFDINC{\emph{WFD-INC}\xspace}
+\def\WFDIP{\emph{WFD-IP}\xspace}
+\def\SOTA{\emph{SOTA}\xspace}
+\def\BFS{\emph{BFS}\xspace}
+\def\openspace{\emph{open-space}\xspace}
+\def\mapevent{map-event}
+\def\runtime{run-time}
+\newcommand{\term}[1]{{\left(#1\right)}}
+\newcommand{\execTime}[1]{#1^\term{t}}
+\newcommand{\order}[1]{\mathcal{O}\term{#1}}
+\def\MyTikzScale{2}
+
+\setbeamercolor{note}{fg=black,bg=lightgray}
+
+\title{Robot Exploration with Fast Frontier Detection: Theory and Experiments}
+
+%\subtitle{}
+
+% - Use the \inst{?} command only if the authors have different
+%   affiliation.
+%\author{F.~Author\inst{1} \and S.~Another\inst{2}}
+\author{Matan Keidar}
+%\author{Matan Keidar \and Eran Sadeh-Or \and \underline{Gal A. Kaminka}}
+
+% - Use the \inst command only if there are several affiliations.
+% - Keep it simple, no one is interested in your street address.
+\institute[Universities of]
+{
+MAVERICK Group \\ Department of Computer Science\\
+Bar-Ilan University
+}
+
+\date{Thesis Defense}
+
+
+% This is only inserted into the PDF information catalog. Can be left
+% out.
+\subject{Talks}
+
+
+
+% If you have a file called "university-logo-filename.xxx", where xxx
+% is a graphic format that can be processed by latex or pdflatex,
+% resp., then you can add a logo as follows:
+
+  \pgfdeclareimage[height=0.5cm]{images/logo.jpg}{images/logo.jpg}
+  \logo{\pgfuseimage{images/logo.jpg}}
+\pgfdeclareimage[height=0.6cm]{images/maverickLogo.jpg}{images/maverickLogo.jpg} 
+
+% put MSRI logo in bottom left 
+\setbeamertemplate{sidebar left}{% 
+   \vfill% 
+   \rlap{\hskip0.1cm% 
+         %\href{images/logo.jpg}% 
+         {\pgfuseimage{images/maverickLogo.jpg}}}% 
+   \vskip2pt% 
+   \llap{\usebeamertemplate***{navigation symbols}\hskip0.1cm}% 
+   \vskip2pt% 
+} 
+
+
+
+
+% Delete this, if you do not want the table of contents to pop up at
+% the beginning of each subsection:
+%  \AtBeginSubsection[]
+%  {
+%  \begin{frame}<beamer>
+%  \frametitle{Outline}
+%  \tableofcontents[currentsection]
+%  \end{frame}
+%  }
+
+% If you wish to uncover everything in a step-wise fashion, uncomment
+% the following command:
+
+%\beamerdefaultoverlayspecification{<+->}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+%\begin{frame}
+%\frametitle{Outline}
+%\tableofcontents
+%% You might wish to add the option [pausesections]
+%\end{frame}
+
+\include{introduction}
+\include{wfd}
+\include{ffd}
+\include{complexity}
+\include{maintenance_and_improvements}
+\include{experimental_results}
+\include{conclusions}
+
+% \begin{frame}
+% \begin{beamercolorbox}[center,shadow=true,rounded=true]{note}
+% 	\Huge Questions?
+% \end{beamercolorbox}
+% \end{frame}
+
+\appendix
+\include{sorting_hidden}
+\include{ffd_sound_complete}
+\include{wfd_complexity_hidden}
+\include{ffd_complexity_hidden}
+
+% \begin{frame}
+% \frametitle{}
+% 
+% % You can create overlays
+% \begin{itemize}
+%   \item using the \texttt{pause} command:
+%   \begin{itemize}
+%     \item First item.
+%     \pause
+%     \item Second item.
+%   \end{itemize}
+%   \item using overlay specifications:
+%   \begin{itemize}
+%     \item<3-> First item.
+%     \item<4-> Second item.
+%   \end{itemize}
+%   \item using the general \texttt{uncover} command:
+%   \begin{itemize}
+%     \uncover<5->{\item First item.}
+%     \uncover<6->{\item Second item.}
+%   \end{itemize}
+% \end{itemize}
+% \end{frame}
+
+% \section*{Summary}
+% 
+% \begin{frame}
+% \frametitle<presentation>{Summary}
+% 
+% \begin{itemize}
+%   \item The \alert{first main message} of your talk in one or two lines.
+% \end{itemize}
+% 
+% % The following outlook is optional.
+% \vskip0pt plus.5fill
+% \begin{itemize}
+%   \item Outlook
+%   \begin{itemize}
+%     \item Something you haven't solved.
+%     \item Something else you haven't solved.
+%   \end{itemize}
+% \end{itemize}
+% \end{frame}
+
+\bibliographystyle{plainnat}
+% \bibliographystyle{abbrv}
+\bibliography{ffd_bib}
+
+\end{document}

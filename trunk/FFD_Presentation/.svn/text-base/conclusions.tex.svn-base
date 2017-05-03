@@ -1,0 +1,43 @@
+\section{Summary}
+
+% \begin{frame}<beamer>
+% \frametitle{Outline}
+% \tableofcontents[currentsection,currentsubsection]
+% \end{frame}
+
+\begin{frame}<beamer>
+\frametitle{Summary and Future Work}
+\begin{itemize}
+  \item Frontier Detection: a problem ignored by others 
+  %\item Reducing frontier detection time can reduce exploration time
+  \item \WFD, \FFD, \WFDINC, \WFDIP: methods for frontier detection
+%   		\begin{itemize}
+%   		  \item significant reduction of calculation time
+%   		\end{itemize}
+  \item Complexity and Correctness Analysis
+  \item Reduction of 1--2 orders of magnitude of run-time
+  		\begin{itemize}
+  		  \item Fastest algorithm in the world!
+  		\end{itemize}
+  \item Theoretical and empirical results 
+  \item Result: real-time frontier detection on weak CPU's
+  \item Publications:
+  	\begin{itemize}
+  	  \item AAMAS 2012
+  	  \item ARMS workshop at AAMAS 2011 
+  	\end{itemize}
+  \item Future work:
+  	\begin{itemize}
+	  \item Address efficient methods for maintaining frontiers in \FFD
+	  %\item Integrate \FFD into EKF-based systems
+	  \item Novel exploration policies based on real-time
+	  frontier-detection
+	\end{itemize}
+%   \item {For more information:}
+%   	\begin{itemize}
+%   	  \item \url{matankdr@gmail.com}
+%   	  %\item \email{eranpolo@gmail.com}
+%   	  \item \url{galk@cs.biu.ac.il}
+%     \end{itemize}
+\end{itemize}
+\end{frame}

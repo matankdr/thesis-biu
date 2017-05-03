@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/5/trunk/Thesis/results_thesis1/results_wfd_INC/simulation.clf/executions
+END
+best_particle_index.txt
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/!svn/ver/5/trunk/Thesis/results_thesis1/results_wfd_INC/simulation.clf/executions/best_particle_index.txt
+END
+partial_ffd_executions.txt
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/5/trunk/Thesis/results_thesis1/results_wfd_INC/simulation.clf/executions/partial_ffd_executions.txt
+END
+exploration_execution_wfdINC.txt
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/!svn/ver/5/trunk/Thesis/results_thesis1/results_wfd_INC/simulation.clf/executions/exploration_execution_wfdINC.txt
+END
+ffd_executions.txt
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/5/trunk/Thesis/results_thesis1/results_wfd_INC/simulation.clf/executions/ffd_executions.txt
+END
+done.txt
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/5/trunk/Thesis/results_thesis1/results_wfd_INC/simulation.clf/executions/done.txt
+END

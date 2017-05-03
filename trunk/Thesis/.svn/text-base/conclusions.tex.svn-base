@@ -1,0 +1,64 @@
+This chapter contains a summary of the work presented in this thesis
+(Section \ref{section:conclusions}) and our plans for future work (Section
+\ref{section:future_work}).
+
+\section{Conclusions}
+\label{section:conclusions}
+The main motivation for our work was practical issues. It all started
+from a joint project with MAFAT.
+The goal of the project was to create an autonomous robot that explores the
+entire floor of our lab.
+However, we found out that the frontier detection module is very time-consuming.  
+It was then that we realized that frontier detection deserves more study.
+
+Frontier-based exploration is the most common approach to solve the exploration
+problem. State-of-the-art frontier detection methods process the entire map data
+which hangs the exploration system for a few seconds with every call to the
+frontier detection algorithm. 
+
+In this work we present four novel faster frontier detectors, \WFD, \FFD,
+\WFDINC and \WFDIP. The first algorithm, a graph-based search, processes the map
+points which have already been scanned by the robot sensors and therefore, does
+not process unknown regions in each run (though it grows slower as more area is
+known). The second algorithm, a laser-based approach for frontier detection,
+only processes new laser readings which are received in real time, eliminating
+also much of the known search area. However, maintaining previous frontiers
+knowledge requires tight integration with the mapping component, which may not
+be straightforward. The third and fourth algorithms are a combined approach of
+both \WFD and \FFD. Both algorithms search for frontiers within the known
+regions but their search space is still smaller than \WFD's search space since
+they search for frontiers only in the regions that were covered by the robot
+sensors since their last execution. 
+
+We describe efficient implementation for all algorithms and compare them
+empirically. \FFD and \WFDIP are shown to outperform \WFD, \WFDINC by 1--2
+orders of magnitude. In addition, \FFD and \WFDIP outperform state-of-the-art by
+2--3 orders of magnitude.
+
+\section{Future Work}
+\label{section:future_work}
+In future, we plan to integrate the general maintenance mechanism with
+\emph{EKF}-based SLAM implementations, which we hope will lead to further
+improvements. We also plan to begin investigation of novel exploration policies,
+based on real-time frontier-detection. In addition, we plan to investigate the
+performance of \WFDIP on different machines, as mentioned in Section
+\ref{section:what_happend_to_wfdip_on_weak_machine}.
+
+% \subsection{Speeding-Up \WFD Even Further}\label{section:wfd_speedup}
+% \WFD's execution time can be boosted even more by
+% reducing the grid size (i.e., by using a coarse grid). Of course, there is a
+% trade-off between shorter execution time and the quality of the output frontiers. Even though, standard
+% exploration tasks can utilize the output frontiers received in this manner.
+% The grid is divided into blocks in size of the robot's width and height.
+% Smaller blocks will not make sure that robot will be able to pass through
+% terrain obstacles (i.e. corridors). Each block in the real world is represented
+% by a single cell in the reduced grid. In order to determine the occupancy value
+% of the cell, we examined different strategies. We considered both the speed of
+% creating the new grid and the quality of the output.
+% %such as: majority, average or
+% %sampling the certain cells in the block. 
+% We found out that sampling the center of the block edges and the
+% block center yields the best results. 
+% % \include{algorithms/iterative_frontier_detector_outline}
+% We plan to investigate efficient techniques to reduce the grid size while
+% considering the quality of the output coarse grid data. 

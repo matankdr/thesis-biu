@@ -1,0 +1,126 @@
+\subsection*{FFD is Complete and Sound}
+
+\begin{frame}
+\label{frame:ffd_complete}
+\frametitle{\FFD is Complete}
+\only<+> {
+
+\begin{lemma}[\ref{lem:newf}]
+\label{lem:newf}
+Suppose $f$ is a frontier point at time $t$, which was not a frontier point at
+any time $s$, where $s<t$.\\ Then \FFD will mark $f$ as a frontier given
+observation $O_t$.
+\end{lemma}
+}
+%\end{frame}
+
+%\begin{frame}
+%\frametitle{\FFD is Complete}
+\only<+>{
+\begin{proof}
+\begin{itemize}
+\item Towards a contradiction: \FFD did not recognize $f$ as a
+frontier
+\item $f$ cannot be located wholly within an \textit{unknown} region 
+	\begin{itemize}
+	  \item because it must have at least one \emph{Open Space} neighbor
+	\end{itemize}
+\item $f$ cannot be located wholly within a \textit{known} 
+    \begin{itemize}
+      \item since $f$ is a valid frontier point and hence, its value is $Unknown$
+	\end{itemize}
+\item Therefore, $f$ must be located on the contour itself.
+\item Detection Stage: \FFD scans \emph{all} contour points sequentially
+	\begin{itemize}
+	  \item and specifically searches for frontier points
+	\end{itemize}
+\item It follows that $f$ would be detected, \alert{contradicting} the
+assumption
+\end{itemize}
+\end{proof}
+}
+\end{frame}
+
+\begin{frame}
+\frametitle{\FFD is Complete}
+\only<+>{
+\begin{theorem}[Completeness]
+ \label{thm:complete}
+Let $f$ be a valid frontier point at time $t$.\\Then \FFD will mark $f$ as a
+frontier point given the sequence of observations $\langle O_0,\ldots,O_t\rangle$.
+\end{theorem}
+}
+%\end{frame}
+
+%\begin{frame}
+%\frametitle{\FFD is Complete}
+\only<+>{
+\begin{proof}
+\begin{itemize}
+\item{\bf Case 1. $f$ is a new frontier point at time $t$.} \\ Trivially,
+this case is handled directly by lemma \ref{lem:newf}.
+\item {\bf Case 2. $f$ was a new frontier point at time $s$, where $s<t$.} \\
+\begin{itemize}
+  \item Let $s$ be the earliest time in which $f$ was a frontier.
+  \item Based on lemma \ref{lem:newf}, it follows that it was detected at this
+  time.
+  \item $f$ must be a frontier point that is maintained by \FFD at time $t$.
+  \item $f$ can be eliminated only by the maintenance stage.
+  \item $f$ is still a valid frontier and hence, was not covered by the
+  sensors.
+  \item Therefore, $f$ will not be scanned and eliminated in time $t$
+  \item $\Rightarrow$ $f$ remains classified as a frontier by \FFD.
+\end{itemize}
+
+\item In both cases \FFD will recognize $f$ to be a valid frontier at
+time $t$.
+\end{itemize}
+\end{proof}
+}
+\end{frame}
+
+\begin{frame}
+\label{frame:ffd_sound}
+\frametitle{\FFD is Sound}
+\only<+>{
+\begin{theorem}[Soundness]
+\label{thm:sound}
+Let $\hat{f}$ be an arbitrary point in the occupancy grid, which is \emph{not}
+a frontier at time $t$.\\Then \FFD will not return $\hat{f}$ as a frontier point,
+given the sequence of observations $\langle O_0,\ldots,O_t\rangle$.
+\end{theorem}
+}
+%\end{frame}
+
+%\begin{frame}
+%\frametitle{\FFD is Sound}
+\only<+>{
+\begin{proof}
+\begin{itemize}
+  \item $\hat{f}$ is not \emph{Unknown} or all its neighbors are not \emph{Open
+  Space}
+  \item {\bf Case 1. $\hat{f}$ is marked as a new frontier.}
+  	\begin{itemize}
+  	  %\item \FFD detects $\hat{f}$ as a new frontier
+  	  \item $\hat{f}$ must be located on the contour \emph{and} detected by
+  	  Extraction stage
+  	  \item \FFD specificially avoids detecting non-frontier points as
+  	  frontiers
+  	  \item Case 1 is not possible
+  	\end{itemize}
+  \item{\bf Case 2. $\hat{f}$ is an old frontier but was not eliminated.}
+  	\begin{itemize}
+  	  \item $\hat{f}$ is located inside the active area
+  	  and was not eliminated.
+  	  \item $\hat{f}$ is a point that was covered by the robot's sensors
+  	  \item Each point in the map keeps a frontier index (or NULL value)
+  	  \item \FFD scans $\hat{f}$ and finds out it has a not NULL frontier index
+  	  \item The Maintenance stage will eliminate $\hat{f}$
+  	  \item Case 2 is not possible  
+  	\end{itemize}
+\end{itemize}
+
+\end{proof}
+\hyperlink{frame:ffd_sound_complete}{\beamergotobutton{Back to Slide}}
+}
+\end{frame}

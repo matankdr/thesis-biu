@@ -1,0 +1,193 @@
+\documentclass[masters,oneside]{BIUCS} 
+\usepackage{graphicx}            % toinclude images 
+\usepackage{pslatex}     % to use PostScript fonts
+
+\usepackage{pdfpages}
+
+\usepackage{amssymb,latexsym}
+\usepackage{amsmath} 
+
+%\usepackage{subfig}
+\usepackage{url}
+\usepackage{verbatim}
+\usepackage{subfigure}
+
+\usepackage{xspace}
+\def\FFD{\emph{FFD}\xspace}
+\def\WFD{\emph{WFD}\xspace}
+\def\WFDINC{\emph{WFD-INC}\xspace}
+\def\WFDIP{\emph{WFD-IP}\xspace}
+\def\SOTA{\emph{SOTA}\xspace}
+\def\BFS{\emph{BFS}\xspace}
+\def\openspace{\emph{open-space}\xspace}
+\def\mapevent{map-event}
+\def\runtime{run-time}
+\def\MyTikzScale{3}
+
+\newcommand{\NOTE}[1] 
+{\par\begin{center}\fbox{
+\begin{minipage}[t]{0.95\columnwidth}
+{\bf Note: }\\ #1
+\end{minipage}
+}\end{center}}
+
+
+% citations
+\usepackage{bibentry}
+\newcommand{\ignore}[1]{}
+\newcommand{\nobibentry}[1]{{\let\nocite\ignore\bibentry{#1}}}
+% apsrev entries in the text need definitions of these commands
+\newcommand{\bibfnamefont}[1]{#1}
+\newcommand{\bibnamefont}[1]{#1}
+
+% algorithms
+\usepackage[chapter]{algorithm}
+%\usepackage{algorithmic}
+\usepackage{algpseudocode}
+\renewcommand{\algorithmiccomment}[1]{// #1}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+\newcommand{\StatexIndent}[1][3]{%
+	\setlength\@tempdima{\algorithmicindent}%
+	\Statex\hskip\dimexpr#1\@tempdima\relax}
+\newcommand{\pushcode}[1][1]{\hskip\dimexpr#1\algorithmicindent\relax}
+\def\NoNumber#1{{\def\alglinenumber#1{}\State #1}\addtocounter{ALG@line}{-1}}
+
+\usepackage{datatool}
+
+\usepackage[normalem]{ulem}
+
+%theorems
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+
+% tikz drawings
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{matrix,arrows}
+
+%\usepackage{xltxtra}
+%\newfontfamily{\sbl}[Script=Hebrew]{David CLM}
+
+\newenvironment{definition}[1][Definition.]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{example}[1][Example.]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{remark}[1][Remark]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{proofsketch}[1][Proof Sketch]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+
+%%% shortcuts
+\newcommand{\term}[1]{{\left(#1\right)}}
+\newcommand{\execTime}[1]{#1^\term{t}}
+\newcommand{\order}[1]{\mathcal{O}\term{#1}}
+
+\input{abstract}
+\input{acknowledgements}
+
+
+% % The members of your committee (masters only need A and B, PhD need all 4)
+% \MemberA{Committee Member A} \MemberB{Committee Member B} \MemberC{Committee
+% Member C} \MemberD{Committee Member D}
+
+\begin{document}
+\nobibliography*
+ % Start page counting in roman numerals
+ \frontmatter
+
+\input{cover}
+
+%\input{cover_page_heb}
+%%%%%%%%%%%%\input{cover_page}
+
+ % This command makes the formal preliminary pages. You can comment it out
+ % during the drafting process if you want to save paper.
+ \makepreliminarypages
+
+
+%\listoffigures
+ % Start regular page counting at page 1
+ \mainmatter
+
+% OK. Everything is set up. Type your thesis here.
+% \NOTE{
+% TODO:\\
+% \begin{itemize}
+%   \item \sout{hebrew cover page in the end}
+%   \item \sout{re-order FFD algorithm instead of splitting to 3 parts}
+%   \item verify that all figures are eps
+%   \item add pylab graphs
+%   \item \sout{section FFD Maintenance is stuck on 4.1.4}
+%   \item \sout{Remove any references to the word ``paper''}
+%   \item indexes vs. indices
+%   \item \sout{runtime vs. run-time}
+%   \item Pay attention if running on Tbone or Laptop (experiments chapter)
+%   \item Fix indentation of wfd algorithms (line break)
+%   \item \sout{Should all algorithms have single space between lines? (Algorithm
+%   \ref{alg:WavefrontFrontierDetectorIncremental})}
+%   \item verify \WFD and other improvements to be the same as sent to AAMAS-12
+%   \item verify that \WFD and \WFDINC and \WFDIP have same variables' names
+%   \item get results from rice
+%   \item remove ulem package
+%   \item Verify graph colors in black and white setting
+% \end{itemize}
+% }
+
+\chapter{Introduction}
+\label{chap:introduction}
+\input{introduction}
+
+\chapter{Related Work}
+\label{chap:related_work}
+\input{related_work}
+
+\chapter{Wavefront Frontier Detector}
+\label{chap:wfd}
+\input{wfd}
+
+\chapter{Fast Frontier Detector}
+\label{chap:ffd}
+\input{ffd}
+
+\chapter{Complexity Analysis}
+\label{chap:complexity}
+\input{complexity}
+
+\chapter{About Maintenance and Improving \WFD}
+\label{chap:maintenance}
+\input{maintenance_and_improvements}
+
+\chapter{Experimental Results}
+\label{chap:results}
+\input{experimental_results}
+
+\chapter{Conclusions and Future Work}
+\label{chap:conclusions}
+\input{conclusions}
+%  \chapter{Future Research} \label{chap:6} \include{chapter6}
+
+% Start labeling chapters with letters and calling them appendices \appendix
+
+%\chapter{Appendix}
+%\label{chapter:appendix}
+
+% You can put supplimentary content in an appendix.
+
+% Make the bibliography. Enter your references in the BibTex file
+% "references.bib"
+ 
+ \nocite{*}
+ \bibliography{full,ffd_bib}
+
+% Make the index
+
+% \printindex
+
+%\input{cover_page}
+%\input{cover_page}
+\includepdf[pages={1}]{abstract_heb.pdf}
+\includepdf[pages={1}]{advisor_heb.pdf}
+\includepdf[pages={1}]{heb_cover.pdf}
+\end{document}

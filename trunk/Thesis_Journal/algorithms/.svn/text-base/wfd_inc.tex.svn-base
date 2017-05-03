@@ -1,0 +1,71 @@
+
+\begin{algorithm}[htbp]
+\caption{Incremental Wavefront Frontier Detector (WFD-INC)}
+\label{alg:WavefrontFrontierDetectorIncremental}
+\begin{algorithmic}[1]
+
+\Require{$queue_m$} \Comment{queue, used for detecting frontier
+points from a given map} 
+ 
+\Require{$pose$} \Comment{current global position of the
+robot}
+
+\Require \colorbox{Gray}{$frontiersDB$}
+\Comment{data-structure that contains last known frontiers}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\Function{WFD-INC}{$activeArea,Map,pose, frontiersDB$}
+
+\If {\colorbox{Gray}{best particle index was changed from last execution}}
+\label{mark:wfdinc_particle_changed_start}
+	\State {\colorbox{Gray}{clear all data from $frontiersDB$}}
+	\State {\colorbox{Gray}{$activeArea \gets Map$ }} \Comment{active
+	area contains all map points}
+\EndIf
+\label{mark:wfdinc_particle_changed_end}
+
+\State{$queue_m \gets \emptyset$}
+\State{$newFrontiers \gets \emptyset$}
+
+\State {\Call {Enqueue}{$queue_m$, $pose$}}
+
+\State {mark $pose$ as ``Map-Open-List''} 
+\Statex{}
+\While {$queue_m$ is not empty}
+
+	\State{$p \gets$ \Call {Dequeue}{$queue_m$}}
+	 
+	\If{$p$ is marked as ``Map-Close-List''}
+		\State{continue}
+	\EndIf 
+	
+	\If{$p$ is a frontier point}
+		\State{$foundFrontier \gets$ \Call {Extract-Frontier-2D}{$p$}}
+		\State{add $foundFrontier$ to $newFrontiers$}
+		\State{mark all points of $foundFrontier$ as ``Map-Close-List''}
+	\EndIf \newline
+	
+	\ForAll{$v \in adj(p)$}
+		\If{$v$ not marked as \{``Map-Open-List'', ``Map-Close-List''\} 
+		 \textbf{and} $v$ has at least one ``Map-Open-Space'' neighbor 
+		 \colorbox{Gray}{\textbf{and} $v \in activeArea$} }
+		\label{mark:wfdinc_check_if_in_active_area}
+		
+			\State{\Call {Enqueue}{$queue_m$,$v$}}
+		
+			\State{mark $v$ as ``Map-Open-List''}
+		\EndIf
+	\EndFor \newline
+	
+	\State{mark $p$ as ``Map-Close-List''}
+	%\State{\colorbox{Gray}{mark $p$ as ``visited''}}
+\EndWhile
+
+
+\State{\colorbox{Gray}{\Call {Maintain-Frontiers}{$newFrontiers,
+frontiersDB,activeArea$}}}
+\label{mark:wfdinc_call_maintenance}
+\EndFunction
+\end{algorithmic}
+\end{algorithm}
+

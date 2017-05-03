@@ -1,0 +1,38 @@
+\begin{algorithm}[htbp]
+\caption{Fast Frontier Detector (FFD): Outline}
+\label{alg:ffd_outline}
+\begin{algorithmic}[1]
+
+\Require $frontiersDB$ 
+\Comment{data-structure that contains last known frontiers}
+
+\Require{$pose$} \Comment{current global position of the robot}
+\Require{$lr$} \Comment {laser readings which were received in
+current iteration. Each element is a 2-d cartesian point} 
+\Require $activeArea$
+\Comment{data-structure that contains all points that lie inside the active
+area}
+
+\Statex {\\}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\Comment{polar sort readings according to robot position}
+\State $sorted \gets$ \Call {Sort-Polar}{$lr, pose$} 
+\label{mark:ffd_sort}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\Statex{\\}
+\Comment{get the contour from laser readings}
+\State $contour \gets$\Call {Contour}{$sorted$}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\Statex{\\}
+\Comment{extract new frontiers from contour}
+\State $NewFrontiers \gets$ \Call {Extract-Frontiers-1D}{$contour$}
+
+\Statex{\\}
+\Comment{maintainance of previously detected frontiers}
+\State \Call {Maintain-Frontiers}{$NewFrontiers,frontiersDB,activeArea$}
+
+\end{algorithmic}
+\end{algorithm}
+

@@ -1,0 +1,17 @@
+\Abstract{ 
+Frontier-based exploration is the most common approach to exploration, a
+fundamental problem in robotics. In frontier-based exploration, robots
+explore by repeatedly computing (and moving towards) \emph{frontiers},
+the segments which separate the known regions from those unknown. However, most
+frontier detection algorithms process the entire map data. This can be a time
+consuming process which slows down the exploration. In this thesis, we present
+two novel frontier detection algorithms: \WFD, a graph search based
+algorithm and \FFD, which is based on processing only the
+new laser readings data. In contrast to state-of-the-art methods, both
+algorithms do not process the entire map data. 
+This thesis contains a theoretical complexity analysis for both algorithms and
+since \FFD is a novel approach, we proove its correctness. We succeeded to
+improve \WFD and \FFD performance even further by combining them into two new algorithms called \WFDINC and \WFDIP.
+We implemented all algorithms and showed that all are faster than a
+state-of-the-art frontier detector implementation (by several orders of magnitude).
+}

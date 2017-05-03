@@ -1,0 +1,48 @@
+\section{WFD}
+% \begin{frame}<beamer>
+% \frametitle{Outline}
+% \tableofcontents[currentsection,currentsubsection]
+% \end{frame}
+ \subsection*{Background}
+
+\begin{frame}
+\frametitle{\WFD: Wavefront Frontier Detector}
+%\begin{itemize}
+  \WFD is a \emph{Breadth-First Search} approach for frontier detection:
+  %\item \WFD avoids searching unknown regions 
+  %\item \WFD scans only known regions
+%\end{itemize}
+%\end{frame}
+
+%\subsection*{WFD Outline}
+%\begin{frame}
+%\frametitle{\WFD Outline}
+\begin{enumerate}
+  \item Enqueue current robot position
+  \item Perform Breadth-First Search 
+  	\begin{itemize}
+  	  \item scan only open-space points that were not previously scanned
+  	\end{itemize}
+  \item For every dequeued point, check if it is a frontier point
+  \begin{itemize}
+    \item If True: extract the frontier by using another Breadth-First Search
+  \end{itemize}
+\end{enumerate}
+\end{frame}
+
+\subsection*{Conclusions}
+\begin{frame}
+\frametitle{\WFD Conclusions}
+\begin{itemize}
+%  \item Ensures that only known regions are actually scanned 
+  \item Frontier points are adjacent to open space points
+  	\begin{itemize}
+  	  \item All relevant frontiers will be found when \WFD finishes
+  	  \item Connectivity of frontier points ensures complete frontier extraction
+  	  \item The algorithm does not have to scan the entire grid
+  each time 
+  	\end{itemize} 
+  \item Completeness and Soundness are guranteed by \emph{BFS}
+  \item \WFD still searches frontiers in all known space
+\end{itemize}
+\end{frame}

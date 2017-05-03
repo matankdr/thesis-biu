@@ -1,0 +1,51 @@
+\begin{algorithm}[htbp]
+\caption{Wavefront Frontier Detector (WFD)}
+\label{alg:WavefrontFrontierDetector1}
+\begin{algorithmic}[1]
+
+\Require{$queue_m$} \Comment{queue, used for detecting frontier points from
+a given map} 
+ 
+\Require{$pose$} \Comment{current global position of the
+robot} \label{mark:end_vars_bfs}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\State{$queue_m \gets \emptyset$}
+\label{mark:wfd_stat_init}
+\State {\Call {Enqueue}{$queue_m$, $pose$}}
+\label{mark:wfd_enqueue_robot_pos}
+\State {mark $pose$ as ``Map-Open-List''} \label{mark:wfd_end_init}
+\Statex{}
+\While {$queue_m$ is not empty}
+\label{mark:wfd_start_map_bfs}
+	\State{$p \gets$ \Call {Dequeue}{$queue_m$}}
+	\label{mark:wfd_dequeue_map_bfs} 
+	\If{$p$ is marked as ``Map-Close-List''}
+		\State{continue}
+	\EndIf 
+	
+	\If{$p$ is a frontier point}
+		\State{$NewFrontier \gets$ \Call {Extract-Frontier-2D}{$p$}}
+		\State{save $NewFrontier$}
+		\State{mark all points of $NewFrontier$ as ``Map-Close-List''}
+	\EndIf \newline
+        
+        \ForAll{$v \in N(p)$}
+        \Comment{get all neighbors of current point}
+        %YYYY
+                \State{$isNeighbor \gets$ $v$ has at least one ``Map-Open-Space'' neighbor}
+                \If{$v$ not marked as one of \{``Map-Open-List'',``Map-Close-List''\} \textbf{and} $isNeighbor$}
+%               \If{$v$ not marked as one of \{``Map-Open-List'',``Map-Close-List''\}
+%               \textbf{and} $v$ has at least one ``Map-Open-Space'' neighbor}
+                \label{mark:wfd_is_neighbor_relevant}
+                        \State{\Call {Enqueue}{$queue_m$,$v$}}
+                        \label{mark:wfd_enqueue_map_bfs}
+			\State{mark $v$ as ``Map-Open-List''}
+		\EndIf
+	\EndFor \newline
+	
+	\State{mark $p$ as ``Map-Close-List''}
+\EndWhile
+\label{mark:wfd_end_map_bfs}
+\end{algorithmic}
+\end{algorithm}

@@ -1,0 +1,85 @@
+\input{definitions}
+\begin{tikzpicture}[scale=\MyTikzScale,cap=round]
+  % Local definitions
+  \def\costhirty{0.8660256}
+  \def\cosforthyfive{0.7071067811}
+  % Colors
+  \colorlet{coscolor}{blue}
+
+  % Styles
+  \tikzstyle{axes}=[]
+  \tikzstyle{important line}=[very thick]
+  %\tikzstyle{information text}=[rounded corners,fill=red!10,inner sep=1ex]
+
+  % The graphic
+  \createBackground   
+    
+%     \path (-0.2,-0.2) coordinate (A) (0.2,-0.2) coordinate (B)
+%           (0.2,0.2) coordinate (C) (-0.2,0.2) coordinate (D);
+%         \draw[fill=white] (A)--(B)--(C)--(D)--cycle;
+        
+    \newdimen \R
+    \R=0.4cm
+    
+     \draw[fill=white] (5.625:\R) \foreach \x in {16.875,22.56,...,365.62} {
+     	-- (\x:\R)
+     } -- cycle (95.625:\R);
+
+   \draw[style=important line,coscolor]
+    (0,0) -- node[right=2pt,fill=none] {$r$}
+    (90:\R);
+    
+    
+    \foreach \x in {5.625,11.25,...,365.62} {
+%  		\prev=67.5;
+     	\path (\x:\R) coordinate (P1);
+     	\path (5.625+\x:\R+0.7cm) coordinate (P2);
+     	\path (11.25+\x:\R) coordinate (P3);
+     	\draw[fill=white, dashed, line width=1pt] (P1) -- (P2) -- (P3);
+     	
+     	%\draw (P3) -- (P1);
+%      	\path (\x:\R) coordinate (x2\x)
+    	%\path (0.5*\x+0.5*(\x+45):\R) coordinate (curr)
+    	%\draw[fill=white] (prev) -- (curr)
+    	%\draw[fill=white] (\x:\R) -- (\x:\R);
+    	%\draw (0.5*(\prev+\x):\R) -- (\x:\R);
+    }
+    
+% 	\draw[fill=white] (22.5:\R) \foreach \x in {67.5,112.5,...,382.5} {
+%      	-- (\x:\R)
+%      }	
+    
+    %\draw[fill=white, line width=1pt,dashed] (A)--(0,-1.2)--(B);
+    %\draw[fill=white] (B)--(BC)--(C)--cycle;
+    %\draw[fill=white] (C)--(CD)--(D)--cycle;
+    %\draw[fill=white] (D)--(DA)--(A)--cycle;
+\draw[style=important line,\emphColor]
+    (-5.625:\R) -- node[left=0pt,fill=none] {$b_{32}$}
+    (5.625:\R);
+    
+%     \draw[style=important line,red]
+%     (0:\R+0.1) -- node[left=10pt,above=1pt,fill=none] {$h_8$}
+%     (\R+0.60cm,0);
+    
+    \draw[\emphColor]
+    (\R,0) -- node[left=5pt,above=-5pt,fill=none] {}
+    (0:0.7cm+\R);
+%     (\R-0.01cm,0) -- node[left=5pt,above=-5pt,fill=none] {$h_{32}$}
+%     (0.7cm+\R,0);
+
+  	\node[anchor=east] at (\R+\R,0) (src_h){};
+  	\node[color=\emphColor,anchor=west] at (45:1.3cm) (dst_h) {$h_{32}$};
+  	\node[anchor=east] at (\R,0) (src_b) {};
+  	\node[color=\emphColor,anchor=west] at (-45:1.3cm) (dst_b) {$b_{32}$};
+  	\draw[\emphColor,line width=\arrowWidth] (dst_h) edge[out=180,in=0,<->]
+  	(src_h); \draw[\emphColor, line width=\arrowWidth] (dst_b)
+  	edge[out=180,in=0,<->] (src_b);
+
+    \node[anchor=east] at (\R*0.65,1.5*\R) (src_l) {};
+  	\node[color=\emphColor,anchor=west] at (60:1.3cm) (dst_l) {$l_{32}$};
+  	\draw[\emphColor,line width=\arrowWidth] (dst_l) edge[out=180,in=0,<->]
+  	(src_l); 
+  	\draw[fill=white, \emphColor,line width=2pt] (67.5:\R) -- (71.125:\R+0.7cm);
+  	%l8
+    
+\end{tikzpicture}

@@ -1,0 +1,39 @@
+\begin{titlepage}
+\begin{center}
+%\includegraphics[width=0.9\textwidth]{images/logo.jpg}\\[1cm]
+%\textsc{\LARGE Bar Ilan University}\\[1.5cm]
+\text{\Large M.Sc Proposal}\\[0.5cm]
+%\hrule \\[0.4cm]
+%{\huge \bfseries Speedi	ng Frontier-Based Exploration by
+%Using Semantic Labeling}\\[0.4cm]
+%\hrule \\[1.5cm]
+\hrule
+{ \vspace{2 mm} }
+% { \Huge {\sbl{סימולציית דינמיקה מולקולרית של זרימה
+% מורכבת}}} \\ \text{ } \\
+{ \huge \bfseries Molecular Dynamics Simulation of Complex Fluid Flow } {
+\vspace{3 mm} }
+\hrule
+{ \vspace{8 mm} }
+%author and supervisor
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Author:}\\
+Elad Shulman
+\end{flushleft}
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Supervisor:} \\
+Dennis C. Rapaport
+\end{flushleft}
+\end{minipage}
+\vfill
+\large{Physics Department\\
+Bar Ilan University\\
+Ramat Gan, Israel 52900\\
+\tt\small elad.shulman@gmail.com}
+\vfill
+\today
+\end{center}
+\end{titlepage}

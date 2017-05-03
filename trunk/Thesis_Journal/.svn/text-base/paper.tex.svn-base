@@ -1,0 +1,116 @@
+%%This is a very basic article template.
+%%There is just one section and two subsections.
+\documentclass[a4paper]{article}
+
+% acronyms
+\usepackage{xspace}
+\def\FFD{\emph{FFD}\xspace}
+\def\WFD{\emph{WFD}\xspace}
+\def\WFDINC{\emph{WFD-INC}\xspace}
+\def\WFDIP{\emph{WFD-IP}\xspace}
+\def\SOTA{\emph{SOTA}\xspace}
+\def\BFS{\emph{BFS}\xspace}
+\def\openspace{\emph{open-space}\xspace}
+\def\mapevent{map-event}
+\def\runtime{run-time}
+\def\MyTikzScale{1.7}
+
+\usepackage{fullpage}
+
+%graphics
+\usepackage{graphicx}
+\usepackage{subfigure}
+
+%algorithms
+\usepackage[section]{algorithm}
+\usepackage{algpseudocode}
+\renewcommand{\algorithmiccomment}[1]{// #1}
+
+%math
+\usepackage{amsmath}
+\usepackage{amssymb,latexsym}
+\usepackage{amsthm}
+
+%theorems
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+
+%environments
+\newenvironment{definition}[1][Definition.]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{example}[1][Example.]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{remark}[1][Remark]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{proofsketch}[1][Proof Sketch]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+% \newenvironment{proof}[1][Proof]{\begin{trivlist}
+% \item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+
+\usepackage{verbatim}
+
+%%% shortcuts
+\newcommand{\term}[1]{{\left(#1\right)}}
+\newcommand{\execTime}[1]{#1^\term{t}}
+\newcommand{\order}[1]{\mathcal{O}\term{#1}}
+
+% tikz drawings
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{matrix,arrows}
+
+\begin{document}
+
+\title{Efficient Frontier Detection for Robot Exploration}
+\author{Matan Keidar \and Gal A. Kaminka}
+\maketitle
+
+\input{abstract}
+
+\section{Introduction}
+\label{chap:introduction}
+\input{introduction}
+
+This paper is organized as follows. Section~\ref{chap:related_work} discusses
+related investigations. Sections~\ref{chap:wfd}~and~\ref{chap:ffd} discuss 
+the \WFD and \FFD algorithms, respectively, including their theoretical
+correctness. Section~\ref{chap:complexity}
+discusses  complexity of these methods. 
+Section~\ref{chap:maint} shows how to combine elements of \WFD and \FFD
+to create two improved algorithms, \WFDINC and \WFDIP. Section~\ref{chap:results}
+reports on empirical evaluation of all algorithms, contrasting with the
+state of the art. Finally, Section~\ref{chap:conclusions} concludes.
+
+\section{Related Work}
+\label{chap:related_work}
+\input{related_work}
+
+\section{Wavefront Frontier Detector}
+\label{chap:wfd}
+\input{wfd}
+
+\section{Fast Frontier Detector}
+\label{chap:ffd}
+\input{ffd}
+
+\section{Complexity Analysis}
+\label{chap:complexity}
+\input{complexity}
+
+\section{About Maintenance and Improving \WFD}
+\label{chap:maint}
+\input{maintenance_and_improvements}
+
+\section{Experimental Results}
+\label{chap:results}
+\input{experimental_results}
+
+\section{Conclusions and Future Work}
+\label{chap:conclusions}
+\input{conclusions}
+
+\bibliographystyle{abbrv}
+\bibliography{full,ffd_bib}
+\end{document}

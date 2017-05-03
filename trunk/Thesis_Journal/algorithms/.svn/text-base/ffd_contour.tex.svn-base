@@ -1,0 +1,29 @@
+\begin{algorithm}[htbp]
+\caption{Fast Frontier Detector (FFD): Contour Stage}
+\label{alg:ffd_contour_stage}
+\begin{algorithmic}[1]
+
+\Require {$sorted$} 
+\Comment{sorted set of laser readings}
+\Ensure {$contour$} 
+\Comment{the contour built from the sorted laser readings}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\Statex{\\}
+\Function{Contour}{$sorted$}
+\State{$prev \gets$ \Call {Pop}{$sorted$}}
+\label{mark:ffd_contour_start}
+\State{$contour \gets \emptyset$}
+
+\ForAll {Point $curr \in sorted$}
+	\State {$line \gets$ \Call {Get-Line}{$prev, curr$}} 
+
+	\ForAll {Point $p$ $\in$ $line$ }
+		\State {$contour \gets contour \cup \left\{p \right\}$}
+	\EndFor
+\EndFor
+\State \Return $contour$
+\label{mark:ffd_contour_end}
+\EndFunction 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{algorithmic}
+\end{algorithm}

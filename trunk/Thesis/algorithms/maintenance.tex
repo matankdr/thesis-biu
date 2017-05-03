@@ -1,0 +1,47 @@
+\begin{algorithm}[htbp]
+\caption{Generic Frontier Maintenance}
+\label{alg:wfd_maintenance}
+\begin{algorithmic}[1]
+
+\Require $NewFrontiers$
+\Comment{list of new detected frontiers}
+\Require $frontiersDB$
+\Comment{data-structure that contains last known frontiers}
+\Require $activeArea$
+\Comment{data-structure that contains all points that lie inside the active
+area}
+
+\Function{Maintenance}{$activeArea$,$NewFrontiers,frontiersDB$}
+
+\ForAll {Point $p \in ActiveArea$}
+\Comment{eliminate previously detected frontiers}
+	\If {$p$ is a frontier cell} 
+
+		\State{}		
+		\Comment{split the current frontier into two partial frontiers}
+		\State{get the frontier $f \in frontiersDB$ which enables $p \in f$}
+		
+		\State{$f_1 \gets f[1\ldots p]$}
+		\State{$f_2 \gets f[(p+1)\ldots |f|]$}
+		\State{remove $f$ from $frontiersDB$}
+		\State{add $f1$ and $f2$ to $frontiersDB$}
+	\EndIf
+\EndFor
+
+
+
+\ForAll {Frontier $f \in NewFrontiers$}
+\Comment{store new detected frontiers}
+
+	\If {$f$ overlaps with an existing frontier $existFrontier$}
+		\State{$merged \gets f \cup existFrontier$}
+		\State{remove $existFrontier$ from $frontiersDB$}
+		\State{add $merged$ to $frontiersDB$}
+	\Else 
+		\State{create a new index and add $f$ to $frontiersDB$}	
+	\EndIf
+\EndFor
+
+\EndFunction
+\end{algorithmic}
+\end{algorithm}

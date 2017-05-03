@@ -1,0 +1,45 @@
+\begin{algorithm}[htbp]
+\caption{Fast Frontier Detector (FFD): Extract Frontier Stage}
+\label{alg:ffd_detect_new_frontier_stage}
+\begin{algorithmic}[1]
+
+\Require $contour$ 
+\Comment{the contour built from the sorted laser readings}
+\Ensure $NewFrontiers$
+\Comment{list of new detected frontiers that lie on the contour}
+
+\Function{Extract-Frontiers-1D}{$contour$}
+\State{$NewFrontiers \gets \emptyset$} \Comment {list of new extracted
+frontiers}
+\label{mark:ffd_extract_start}
+
+\State{$prev \gets POP(contour)$}
+
+\If{$prev$ is a frontier cell} \Comment{special case}
+	\State{create a new frontier in $NewFrontiers$}
+\EndIf
+\label{mark:ffd_special_case_end}
+
+\ForAll {Point $curr \in contour$}
+	\If {$curr$ is not a frontier cell}
+	\label{mark:ffd_contour_eliminate_non_frontier_points}
+		\State{$prev \gets curr$}
+	\ElsIf {$curr$ has been visited before}
+		\label{mark:ffd_redection_avoidance_start} 
+		\State{$prev \gets curr$}
+		\label{mark:ffd_redection_avoidance_end}
+	\ElsIf {$curr$ and $prev$ are frontier cells}
+		\State{add $curr$ to last created frontier}
+		\State{$prev \gets curr$}
+	\Else 
+		\State{create a new frontier in $NewFrontiers$}
+		\State{add $curr$ to last created frontier}
+		\State{$prev \gets curr$}
+	\EndIf
+\EndFor 
+
+\State \Return $NewFrontiers$
+\label{mark:ffd_extract_end}
+\EndFunction
+\end{algorithmic}
+\end{algorithm}

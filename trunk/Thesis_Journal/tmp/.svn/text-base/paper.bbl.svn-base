@@ -1,0 +1,268 @@
+\begin{thebibliography}{10}
+
+\bibitem{apostolopoulos2001robotic}
+D.~Apostolopoulos, L.~Pedersen, B.~Shamah, K.~Shillcutt, M.~Wagner, and
+  W.~Whittaker.
+\newblock {Robotic antarctic meteorite search: Outcomes}.
+\newblock In {\em Proceedings of {IEEE} International Conference on Robotics
+  and Automation ({ICRA}-01)}, pages 4174--4179, 2001.
+
+\bibitem{batalin2003efficient}
+M.~Batalin and G.~Sukhatme.
+\newblock Efficient exploration without localization.
+\newblock In {\em Proceedings of {IEEE} International Conference on Robotics
+  and Automation ({ICRA}-03)}, volume~2, pages 2714--2719. IEEE, 2003.
+
+\bibitem{berhault_robot_2003}
+M.~Berhault, H.~Huang, P.~Keskinocak, S.~Koenig, W.~Elmaghraby, P.~Griffin, and
+  A.~Kleywegt.
+\newblock Robot exploration with combinatorial auctions.
+\newblock In {\em {P}roceedings of the {IEEE/RSJ} International Conference on
+  Intelligent Robots and Systems ({IROS}-03)}, pages 1957--1962, 2003.
+
+\bibitem{bouraqadi_flocking-based_2009}
+N.~Bouraqadi, A.~Doniec, and E.~M. de~Douai.
+\newblock {Flocking-Based} {Multi-Robot Exploration}.
+\newblock In {\em National Conference on Control Architectures of Robots},
+  2009.
+
+\bibitem{bresenham2010algorithm}
+J.~Bresenham.
+\newblock {Algorithm for computer control of a digital plotter}.
+\newblock {\em IBM Systems Journal}, 4(1):25--30, 2010.
+
+\bibitem{burgard_collaborative_2000}
+W.~Burgard, M.~Moors, D.~Fox, R.~Simmons, and S.~Thrun.
+\newblock Collaborative multi-robot exploration.
+\newblock In {\em {IEEE} International Conference on Robotics and Automation.
+  Vol. 1}, pages 476--481, 2000.
+
+\bibitem{burgard05tro}
+W.~Burgard, M.~Moors, C.~Stachniss, and F.~Schneider.
+\newblock Coordinated multi-robot exploration.
+\newblock {\em IEEE Transactions on Robotics}, 21(3):376--378, 2005.
+
+\bibitem{calisi2007multi}
+D.~Calisi, A.~Farinelli, L.~Iocchi, and D.~Nardi.
+\newblock Multi-objective exploration and search for autonomous rescue robots.
+\newblock {\em Journal of Field Robotics}, 24(8-9):763--777, 2007.
+
+\bibitem{Cormen2001}
+T.~H. Cormen, C.~E. Leiserson, R.~L. Rivest, and C.~Stein.
+\newblock {\em Introduction to Algorithms}.
+\newblock MIT Press, 2001.
+
+\bibitem{durrant2006simultaneous}
+H.~Durrant-Whyte and T.~Bailey.
+\newblock Simultaneous localisation and mapping ({SLAM}): Part {I} the
+  essential algorithms.
+\newblock {\em Robotics and Automation Magazine}, 13(99):80, 2006.
+
+\bibitem{Fox2010ieee}
+D.~Fox, J.~Ko, K.~Konolige, B.~Limketka, D.~Schulz, and B.~Stewart.
+\newblock {Distributed Multi-robot Exploration and Mapping}.
+\newblock {\em Proceedings of the IEEE}, 94(1):1325--1339, 2010.
+
+\bibitem{geyer1992practical}
+C.~Geyer.
+\newblock Practical markov chain monte carlo.
+\newblock {\em Statistical Science}, 7(4):473--483, 1992.
+
+\bibitem{grisetti05icra}
+G.~Grisetti, C.~Stachniss, and W.~Burgard.
+\newblock Improving grid-based {SLAM} with {Rao-Blackwellized} particle filters
+  by adaptive proposals and selective resampling.
+\newblock In {\em Proceedings of {IEEE} International Conference on Robotics
+  and Automation ({ICRA}-05)}, pages 2443--2448, 2005.
+
+\bibitem{grisetti07tro}
+G.~Grisetti, C.~Stachniss, and W.~Burgard.
+\newblock Improved techniques for grid mapping with {Rao-Blackwellized}
+  particle filters.
+\newblock {\em IEEE Transactions on Robotics}, 23:34--46, 2007.
+
+\bibitem{HASTINGS01041970}
+W.~K. Hastings.
+\newblock Monte carlo sampling methods using markov chains and their
+  applications.
+\newblock {\em Biometrika}, 57(1):97--109, 1970.
+
+\bibitem{hougen2000miniature}
+D.~F. Hougen, S.~Benjaafar, J.~Bonney, J.~Budenske, M.~Dvorak, M.~L. Gini,
+  H.~French, D.~G. Krantz, P.~Y. Li, F.~Malver, B.~J. Nelson,
+  N.~Papanikolopoulos, P.~E. Rybski, S.~Stoeter, R.~M. Voyles, and K.~B. Yesin.
+\newblock A miniature robotic system for reconnaissance and surveillance.
+\newblock In {\em Proceedings of {IEEE} International Conference on robotics
+  and automation ({ICRA}-00)}, pages 501--507, 2000.
+
+\bibitem{Radish}
+A.~Howard and N.~Roy.
+\newblock The robotics data set repository {(RADISH)}, 2003.
+
+\bibitem{julia2012comparison}
+M.~Juli{\'a}, A.~Gil, and O.~Reinoso.
+\newblock A comparison of path planning strategies for autonomous exploration
+  and mapping of unknown environments.
+\newblock {\em Autonomous Robots}, pages 1--18, 2012.
+
+\bibitem{Kitano99robocuprescue}
+H.~Kitano, S.~Tadokoro, I.~Noda, H.~Matsubara, T.~Takahashi, A.~Shinjou, and
+  S.~Shimada.
+\newblock Robocup rescue: Search and rescue in large-scale disasters as a
+  domain for autonomous agents research.
+\newblock In {\em Proceedings of {IEEE} International Conference on Systems,
+  Man and Cybernetics ({SMC}-99)}, pages 739--746. IEEE Computer Society, 1999.
+
+\bibitem{ko_practical_2003}
+J.~Ko, B.~Stewart, D.~Fox, K.~Konolige, and B.~Limketkai.
+\newblock A practical, decision-theoretic approach to multi-robot mapping and
+  exploration.
+\newblock In {\em {P}roceedings of the {IEEE/RSJ} International Conference on
+  Intelligent Robots and Systems ({IROS}-03)}, pages 3232--3238, 2003.
+
+\bibitem{konolige2006centibots}
+K.~Konolige, D.~Fox, C.~Ortiz, A.~Agno, M.~Eriksen, B.~Limketkai, J.~Ko,
+  B.~Morisset, D.~Schulz, B.~Stewart, et~al.
+\newblock Centibots: Very large scale distributed robotic teams.
+\newblock {\em Experimental Robotics IX}, pages 131--140, 2006.
+
+\bibitem{konolige2003large}
+K.~Konolige, C.~Ortiz, R.~Vincent, A.~Agno, M.~Eriksen, B.~Limketkai, M.~Lewis,
+  L.~Briesemeister, E.~Ruspini, D.~Fox, et~al.
+\newblock Large scale robot teams.
+\newblock {\em Multi-Robot Systems: From Swarms to Intelligent Autonoma},
+  2:193--204, 2003.
+
+\bibitem{kuipers1991robot}
+B.~Kuipers and Y.~Byun.
+\newblock A robot exploration and mapping strategy based on a semantic
+  hierarchy of spatial representations.
+\newblock {\em Robotics and autonomous systems}, 8(1-2):47--63, 1991.
+
+\bibitem{lau_behavioural_2003}
+H.~Lau.
+\newblock Behavioural approach for multi-robot exploration.
+\newblock In {\em Australasian Conference on Robotics and Automation {(ACRA)}},
+  Brisbane, December 2003.
+
+\bibitem{leonard1991mobile}
+J.~Leonard and H.~Durrant-Whyte.
+\newblock Mobile robot localization by tracking geometric beacons.
+\newblock {\em {IEEE} Transactions on Robotics and Automation}, 7(3):376--382,
+  1991.
+
+\bibitem{neal1993probabilistic}
+R.~M. Neal.
+\newblock Probabilistic inference using markov chain monte carlo methods.
+\newblock Technical Report CRG-TR-93-1, Department of Computer Science,
+  University of Toronto, September 1993.
+
+\bibitem{puig2010balanced}
+D.~Puig~Valls.
+\newblock Balanced multi-robot exploration through a global optimization
+  strategy.
+\newblock {\em Journal of Physical Agents}, 4(1):35--44, 2010.
+
+\bibitem{rekleitis1997multi}
+I.~Rekleitis, G.~Dudek, and E.~Milios.
+\newblock Multi-robot exploration of an unknown environment, efficiently
+  reducing the odometry error.
+\newblock In {\em International Joint Conference on Artificial Intelligence
+  (IJCAI)}, volume~15, pages 1340--1345, 1997.
+
+\bibitem{rekleitis2001multi}
+I.~Rekleitis, G.~Dudek, and E.~Milios.
+\newblock Multi-robot collaboration for robust exploration.
+\newblock {\em Annals of Mathematics and Artificial Intelligence}, 31(1):7--40,
+  2001.
+
+\bibitem{sawhney_fast_2009}
+R.~Sawhney, K.~M. Krishna, and K.~Srinathan.
+\newblock On fast exploration in {2D} and {3D} terrains with multiple robots.
+\newblock In {\em Proceedings of the Eighth International Joint Conference on
+  Autonomous Agents and Multi-Agent Systems (AAMAS-09)}, pages 73--80, 2009.
+
+\bibitem{simmons_coordination_2000}
+R.~Simmons, D.~Apfelbaum, W.~Burgard, D.~Fox, M.~Moors, S.~Thrun, and
+  H.~Younes.
+\newblock Coordination for multi-robot exploration and mapping.
+\newblock In {\em Proceedings of the Seventeenth National Conference on
+  Artificial Intelligence ({AAAI}-00)}, pages 852--858, 2000.
+
+\bibitem{stachniss06phd}
+C.~Stachniss.
+\newblock {\em Exploration and Mapping with Mobile Robots}.
+\newblock PhD thesis, University of Freiburg, Department of Computer Science,
+  2006.
+
+\bibitem{stachniss2006speeding}
+C.~Stachniss, O.~Mozos, and W.~Burgard.
+\newblock Speeding-up multi-robot exploration by considering semantic place
+  information.
+\newblock In {\em Proceedings of {IEEE} International Conference on Robotics
+  and Automation ({ICRA}-06)}, pages 1692--1697. IEEE, 2006.
+
+\bibitem{stoeter2000robot}
+S.~Stoeter, P.~Rybski, M.~Erickson, M.~Gini, D.~Hougen, D.~Krantz,
+  N.~Papanikolopoulos, and M.~Wyman.
+\newblock A robot team for exploration and surveillance: design and
+  architecture.
+\newblock In {\em Proceedings of the International Conference on Intelligent
+  Autonomous Systems}, pages 767--774, 2000.
+
+\bibitem{Thrun2005Probablistic}
+S.~Thrun, W.~Burgard, and D.~Fox.
+\newblock {\em {Probabilistic Robotics}}.
+\newblock Intelligent robotics and autonomous agents series. The MIT Press,
+  August 2005.
+
+\bibitem{visser_2010_email}
+A.~Visser.
+\newblock personal communication.
+\newblock Email, January 4th, 2011.
+
+\bibitem{visser2008wmcnr}
+A.~Visser and B.~A. Slamet.
+\newblock Including communication success in the estimation of information gain
+  for multi-robot exploration.
+\newblock In {\em {P}roceedings of the 6th International Symposium on Modeling
+  and Optimization in Mobile, Ad Hoc, and Wireless Networks ({WiOpt}-08)},
+  pages 680--687, 2008.
+
+\bibitem{welch1995introduction}
+G.~Welch and G.~Bishop.
+\newblock An introduction to the kalman filter.
+\newblock {\em University of North Carolina, Chapel Hill, NC}, 7(1), 1995.
+
+\bibitem{kai_2010_email}
+K.~Wurm.
+\newblock personal communication.
+\newblock Email, January 20th, 2011.
+
+\bibitem{wurm08iros}
+K.~Wurm, C.~Stachniss, and W.~Burgard.
+\newblock Coordinated multi-robot exploration using a segmentation of the
+  environment.
+\newblock In {\em {P}roceedings of the {IEEE/RSJ} International Conference on
+  Intelligent Robots and Systems ({IROS}-08)}, Nice, France, Sept. 2008.
+
+\bibitem{yamauchi_frontier-based_1997}
+B.~Yamauchi.
+\newblock A frontier-based approach for autonomous exploration.
+\newblock In {\em Proceedings of the 1997 {IEEE} International Symposium on
+  Computational Intelligence in Robotics and Automation ({CIRA}-97)}, pages
+  146--151, Washington, DC, USA, 1997. IEEE Computer Society.
+
+\bibitem{yamauchi_frontier-based_1998}
+B.~Yamauchi.
+\newblock Frontier-based exploration using multiple robots.
+\newblock In {\em Proceedings of the Second International Conference on
+  Autonomous Agents (Agents-98)}, pages 47--53, 1998.
+
+\bibitem{zlot2002multi}
+R.~Zlot, A.~Stentz, M.~Dias, and S.~Thayer.
+\newblock Multi-robot exploration controlled by a market economy.
+\newblock In {\em Proceedings of {IEEE} International Conference on Robotics
+  and Automation ({ICRA}-02)}, volume~3, pages 3016--3023. IEEE, 2002.
+
+\end{thebibliography}

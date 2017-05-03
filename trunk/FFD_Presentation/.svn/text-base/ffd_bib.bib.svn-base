@@ -1,0 +1,268 @@
+@inproceedings{yamauchi_frontier-based_1998,
+	title = {Frontier-based exploration using multiple robots},
+	lccn = {0224},
+	booktitle = {Proceedings of the Second International Conference on Autonomous Agents},
+	author = {B. Yamauchi},
+	year = {1998},
+	pages = {47-53},
+	annote = {{{\textless}p{\textgreater}Frontier} based exploration{\textless}/p{\textgreater}
+{{\textless}p{\textgreater}Mapping:} Evidence grid (grid with probabilities){\textless}/p{\textgreater}
+{\textless}p{\textgreater} {\textless}/p{\textgreater}
+{\textless}p{\textgreater} {\textless}/p{\textgreater}}
+},
+
+@INPROCEEDINGS{Kitano99robocuprescue,
+    author = {Hiroaki Kitano and Satoshi Tadokoro and Itsuki Noda and Hitoshi Matsubara and Tomoichi Takahashi and Atsuhi Shinjou and Susumu Shimada},
+    title = {RoboCup Rescue: Search and Rescue in Large-Scale Disasters as a Domain for Autonomous Agents Research},
+    booktitle = {IEEE International Conference on Systems, Man, and Cybernetics},
+    year = {1999},
+    pages = {739--746},
+    publisher = {IEEE Computer Society}
+},
+
+@inproceedings{yamauchi_frontier-based_1997,
+ author = {Yamauchi, B.},
+ title = {A frontier-based approach for autonomous exploration},
+ booktitle = {Proceedings of the 1997 IEEE International Symposium on Computational Intelligence in Robotics and Automation},
+ year = {1997},
+ isbn = {0-8186-8138-1},
+ pages = {146--151},
+ acmid = {793157},
+ publisher = {IEEE Computer Society},
+ address = {Washington, DC, USA},
+ keywords = {autonomous exploration, evidence grids, frontier detection, laser-limited sonar, mobile robot, mobile robots, navigation, office environments, path planning, probability, specular reflections},
+} 
+
+@book{Cormen2001,
+  author = {T. H. Cormen and C. E. Leiserson and R. L. Rivest and C. Stein},
+  interhash = {dcdeb0ec50a6798abf1724056982b543},
+  intrahash = {d977a6bf54adcfe9a368fd05f535ecf9},
+  publisher = {MIT Press},
+  title = {Introduction to Algorithms},
+  year = 2001,
+  timestamp = {2009.02.07},
+  keywords = {imported},
+  added-at = {2010-01-18T12:17:53.000+0100},
+  description = {My thesis references},
+  owner = {blev},
+  biburl = {http://www.bibsonomy.org/bibtex/2d977a6bf54adcfe9a368fd05f535ecf9/evabl444}
+}
+
+@article{bresenham2010algorithm,
+  title={{Algorithm for computer control of a digital plotter}},
+  author={Bresenham, J.E.},
+  journal={IBM Systems Journal},
+  volume={4},
+  number={1},
+  pages={25--30},
+  issn={0018-8670},
+  year={2010},
+  publisher={IBM}
+}
+
+@misc{_frontier-based_????,
+	title = {{Frontier-Based} Exploration: Detecting Frontiers},
+	url = {http://www.robotfrontier.com},
+	howpublished = {http://www.robotfrontier.com/frontier/detect.html}
+},
+
+@misc{Radish,
+    author = "Andrew Howard and Nicholas Roy", 
+    year = "2003",
+    title = "The Robotics Data Set Repository {(RADISH)}",
+    url = "http://radish.sourceforge.net/",
+},
+
+@misc{GMapping,
+    author = {Giorgio Grisetti, Cyrill Stachniss, Wolfram Burgard}, 
+    title = "GMapping algorithm",
+    howpublished = "http://openslam.org/gmapping.html"
+},
+
+@Article{grisetti07tro,
+  title =        {Improved Techniques for Grid Mapping with {Rao-Blackwellized} Particle Filters},
+  author =       {Grisetti, G. and Stachniss, C. and Burgard, W},
+  journal =      {IEEE Transactions on Robotics},
+  Volume =       {23},
+  issue =        {1},
+  pages =        {34--46},
+  year =         {2007}
+},
+
+
+
+@InProceedings{grisetti05icra,
+  TITLE =	 {Improving Grid-based {SLAM} with {Rao-Blackwellized}
+                  Particle Filters by Adaptive Proposals and Selective
+                  Resampling},
+  AUTHOR =	 {Grisetti, G. and Stachniss, C. and Burgard, W.},
+  BOOKTITLE =	 {Proceedings of the IEEE International Conference on Robotics and Automation (ICRA)},
+  PAGES =        {2443--2448},
+  YEAR =	 {2005},
+}
+
+@misc{visser_2010_email,
+    author = "Arnoud Visser", 
+    title = "personal communication",
+    year = {January 4th, 2011},
+    howpublished = "Email"
+},
+
+@misc{kai_2010_email,
+    author = "Kai M. Wurm", 
+    title = "personal communication",
+    year = {January 20th, 2011},
+    howpublished = "Email"
+},
+
+@inproceedings{burgard_collaborative_2000,
+	title = {Collaborative multi-robot exploration},
+	lccn = {0357},
+	booktitle = {{IEEE} International Conference on Robotics and Automation. Vol. 1},
+	author = {W. Burgard and M. Moors and D. Fox and R. Simmons and S. Thrun},
+	year = {2000},
+	pages = {476--481}
+},
+
+@inproceedings{simmons_coordination_2000,
+	title = {Coordination for multi-robot exploration and mapping},
+	booktitle = {Proceedings of the National Conference on Artificial Intelligence},
+	author = {R. Simmons and D. Apfelbaum and W. Burgard and D. Fox and M. Moors and S. Thrun and H. Younes},
+	year = {2000},
+	pages = {852-858}
+},
+
+@inproceedings{ko_practical_2003,
+	title = {A practical, decision-theoretic approach to multi-robot mapping and exploration},
+	lccn = {0093},
+	booktitle = {Proc. of the {IEEE/RSJ} International Conference on Intelligent Robots and Systems {(IROS)}},
+	author = {J. Ko and B. Stewart and D. Fox and K. Konolige and B. Limketkai},
+	year = {2003},
+	pages = {3232--3238}
+},
+
+@inproceedings{lau_behavioural_2003,
+	title = {Behavioural approach for multi-robot exploration},
+	lccn = {0012},
+	booktitle = {Australasian Conference on Robotics and Automation {(ACRA)}, Brisbane, December},
+	author = {Haye Lau},
+	year = {2003}
+},
+
+@inproceedings{sawhney_fast_2009,
+	title = {On fast exploration in {2D} and {3D} terrains with multiple robots},
+	lccn = {0002},
+	booktitle = {Proceedings of the 8th International Conference on Autonomous Agents and Multiagent {Systems. Vol.} 1},
+	author = {R. Sawhney and K. M Krishna and K. Srinathan},
+	year = {2009},
+	pages = {73-80}
+},
+
+
+@inproceedings{berhault_robot_2003,
+	title = {Robot exploration with combinatorial auctions},
+	lccn = {0076},
+	booktitle = {Proceedings of the International Conference on Intelligent Robots and Systems},
+	author = {M. Berhault and H. Huang and P. Keskinocak and S. Koenig and W. Elmaghraby and P. Griffin and A. Kleywegt},
+	year = {2003},
+	pages = {1957--1962}
+},
+
+@inproceedings{wurm08iros,
+ author = {K.M. Wurm and Stachniss, C. and W. Burgard},
+ title = {Coordinated  Multi-Robot Exploration using a Segmentation of the Environment},
+ booktitle = {Proc.~of the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+ year = 2008,
+ month = sep,
+ address = {Nice, France},
+},
+
+@phdthesis{stachniss06phd,
+ author = {Stachniss, C.},
+ title = {Exploration and Mapping with Mobile Robots},
+ school = {University of Freiburg, Department of Computer
+                 Science},
+ year = 2006,
+ pdfurl = {http://www.informatik.uni-freiburg.de/~stachnis/pdf/stachniss06phd.pdf}
+},
+
+@article{burgard05tro,
+ author = {W. Burgard and M. Moors and C. Stachniss and
+                 F. Schneider},
+ title = {Coordinated Multi-Robot Exploration},
+ journal = {IEEE Transactions on Robotics},
+ year = 2005,
+ volume = {21},
+ number = {3},
+ pages = {376--378},
+ pdfurl = {http://www.informatik.uni-freiburg.de/~stachnis/pdf/burgard05tro.pdf}
+}, 
+
+@conference{apostolopoulos2001robotic,
+  title={{Robotic antarctic meteorite search: Outcomes}},
+  author={Apostolopoulos, D.S. and Pedersen, L. and Shamah, B.N. and Shillcutt, K. and Wagner, M.D. and Whittaker, W.L.},
+  booktitle={IEEE International Conference on Robotics and Automation},
+  pages={4174--4179},
+  year={2001}
+},
+
+
+@inproceedings{hougen2000miniature,
+  author    = {Dean F. Hougen and
+               Saifallah Benjaafar and
+               Jordan Bonney and
+               John Budenske and
+               Mark Dvorak and
+               Maria L. Gini and
+               Howard French and
+               Donald G. Krantz and
+               Perry Y. Li and
+               Fred Malver and
+               Bradley J. Nelson and
+               Nikolaos Papanikolopoulos and
+               Paul E. Rybski and
+               Sascha Stoeter and
+               Richard M. Voyles and
+               Kemal Berk Yesin},
+  title     = {A Miniature Robotic System for Reconnaissance and Surveillance},
+  booktitle = {ICRA},
+  year      = {2000},
+  pages     = {501-507},
+  crossref  = {DBLP:conf/icra/2000},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@conference{bouraqadi_flocking-based_2009,
+	title = {{Flocking-Based} {Multi-Robot Exploration}},
+	lccn = {0000},
+	year = {2009},
+	booktitle = {National Conference on Control Architectures of Robots},
+	author = {N. Bouraqadi and A. Doniec and E. M de Douai}
+	
+},
+
+@INPROCEEDINGS {visser2008wmcnr,
+  title = {Including communication success in the estimation of information gain for multi-robot exploration},
+  author = {Visser, Arnoud and Slamet, Bayu A. },
+  booktitle = {Proceedings of the 6th International Symposium on Modeling and Optimization in Mobile, Ad Hoc, and Wireless Networks (WiOpt 2008)},
+  year = {2008},
+  month = {April},
+  pages = {680--687},
+  publisher = {IEEE Publishing},
+  location = {1-3 April 2008, Berlin, Germany},
+  doi = {10.1109/wiopt.2008.4586160},
+  keywords = {including communication,  information estimation, multi-robot exploration},
+  abstract = {This article investigates the effect of incorporating knowledge about the communication possibilities in an exploration algorithm used to map an unknown environment. The mission is to explore a hypothetical disaster site with a small team of robots. The challenge faced by the robot team is to coordinate their actions such that they efficiently explore the environment in their search for victims. The coordination can only be optimal when the robots share the same map. With a limited communication range the map cannot be shared in all circumstances. This article concentrates on the effect of a distributed map, where each robot has only has knowledge of a part of the global map and has no guaranteed connection to the other robot or the operator.},
+id={cdm-aces-2008-8},
+},
+
+@article{kuipers1991robot,
+  title={A robot exploration and mapping strategy based on a semantic hierarchy of spatial representations},
+  author={Kuipers, B. and Byun, Y.T.},
+  journal={Robotics and Autonomous Systems},
+  volume={8},
+  number={1-2},
+  pages={47--63},
+  year={1991},
+  publisher={Elsevier}
+},

@@ -1,0 +1,115 @@
+\begin{frame}
+\label{frame:ffd_complexity_details}
+\only<+>{
+\frametitle{\FFD Complexity - Sorting Stage}
+\begin{itemize}
+  \item \FFD performs polar-sorting of laser readings. 
+  \item Cross-product instead of actually calculating angle and
+  radius
+	\begin{itemize}
+	  \item which are relatively very time-consuming calculations
+	 \end{itemize}
+  \item Cross-product calculation is performed in a constant time
+  %\item Sorting is performed in time of $\order{n\log{n}}$. 
+  \item $l_r:=$ the number of laser readings received in each measurement 
+  \item Total complexity of this stage is:
+ $$
+ 	\order{l_r\log{l_r}} \cdot \order{1} = \order{l_r \log{l_r}}\nonumber
+ $$
+\end{itemize}
+}
+
+\only<+>{
+\frametitle{\FFD Complexity - Contour Stage}
+\begin{itemize}
+  \item Scans each two adjacent points from the polar-sorted readings.
+  \item \FFD connects each two adjacent points by a line
+	\begin{itemize}
+	  \item by calling \emph{Bresenham's line algorithm}, linear time complexity
+	 \end{itemize}
+  \item $d_{p_i,p_j}:=$ euclidean distance between points $p_i$ and $p_j$
+  \item $\execTime{c}:=$ the length of the contour in time $t$  
+  \item Total complexity of this stage is:
+ $$
+ 	\order{\sum_{p_i \in l_r}{d_{p_{i-1},p_i}}} = \order{\execTime{c}}
+ $$
+\end{itemize}
+}
+
+\only<+>{
+\frametitle{\FFD Complexity - Detection Stage}
+\begin{itemize}
+  \item Scans the contour extracts new frontiers (if available any)
+  \item Each found new detected frontier is added into a list
+  \item All actions are performed in a constant time
+  \item Total complexity of this stage is:
+ $$
+	\underbrace{\order{1}}_{\textrm{special case}} +
+	\underbrace{\order{\execTime{c}} \cdot \order{1}}_{\textrm{general case}} =
+	\order{\execTime{c}}
+ $$
+\end{itemize}
+}
+\end{frame}
+
+\begin{frame}
+\only<+>{
+\frametitle{\FFD Complexity - Maintenance Stage (1)}
+Elimination of previous frontiers:
+\begin{itemize}
+  \item Scans each point that lies inside the active area
+  \item Checks if it was previously belonged to a frontier
+  \item $\execTime{A}:=$ the bounding rectangle (the active area) in time $t$
+  \item $\execTime{f_{max}}:=$ length of the longest frontier the
+  frontier database in time $t$
+  \item $\execTime{n_f}:=$ number of frontiers in the frontier database in time $t$
+  \item Total complexity of this stage is:
+ $$
+	\order{\underbrace{\execTime{A}}_{\text{scanning active area}} \cdot
+        \left(\underbrace{\execTime{f_{max}}}_{\text{find frontier point}} +
+        \underbrace{\log{\execTime{n_f}}}_{\text{get frontier from DB}}\right)}
+ $$
+\end{itemize}
+}
+%\end{frame}
+
+%\begin{frame}
+\only<+>{
+\frametitle{\FFD Complexity - Maintenance Stage (2)}
+Adding new frontiers:
+\begin{itemize}
+  \item Scans each frontier point within all new detected frontiers
+  \item $\execTime{n_{new}}:=$ number of new frontiers that were found in time $t$
+  \item Checks if new frontier point belongs to
+  previously detected frontier
+  \item The check is performed in a constant time
+  \item All other actions are performed in a constant time 
+  \item Total complexity of this stage is:
+ $$
+  	\order{\underbrace{\execTime{n_{new}}}_{\text{scan frontiers}} \cdot 
+  		\term{\underbrace{\execTime{f_{max}}}_{\text{scan all points in
+  		frontier}} + \underbrace{\log{\execTime{n_f}}}_{\text{get frontier
+  		from DB}}}} $$
+\end{itemize}
+}
+\end{frame}
+
+\begin{frame}
+\frametitle{\FFD Complexity - Combining All Stages}
+\begin{itemize}
+  \item We join all previous stages and get:
+ $$
+	\order{ l_r\log{l_r} + 
+        \execTime{c} +
+        \term{\execTime{A} + \execTime{n_{new}}}
+        \cdot \term{\execTime{f_{max}} +
+        \log{\execTime{n_f}}} } $$
+%    \item \alert{XXX: should all steps be supplied?} 
+   \item The above equation can be bounded to:
+   $$\order{\execTime{c} +
+        \log{\execTime{n_f}}}  
+   $$
+\end{itemize}
+
+\hyperlink{frame:ffd_complexity}{\beamergotobutton{Back to Slide}}
+\end{frame}
