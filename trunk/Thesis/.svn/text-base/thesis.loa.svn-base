@@ -1,9 +1,0 @@
-\contentsline {algorithm}{\numberline {3.1}{\ignorespaces Wavefront Frontier Detector (WFD)\relax }}{14}
-\contentsline {algorithm}{\numberline {3.2}{\ignorespaces Extract Frontier 2D\relax }}{15}
-\contentsline {algorithm}{\numberline {4.1}{\ignorespaces Fast Frontier Detector (FFD): Outline\relax }}{18}
-\contentsline {algorithm}{\numberline {4.2}{\ignorespaces Fast Frontier Detector (FFD): Sorting Stage\relax }}{19}
-\contentsline {algorithm}{\numberline {4.3}{\ignorespaces Fast Frontier Detector (FFD): Contour Stage\relax }}{21}
-\contentsline {algorithm}{\numberline {4.4}{\ignorespaces Fast Frontier Detector (FFD): Extract Frontier Stage\relax }}{22}
-\contentsline {algorithm}{\numberline {4.5}{\ignorespaces Fast Frontier Detector (FFD): Maintenance of Previously Detected Frontiers\relax }}{24}
-\contentsline {algorithm}{\numberline {6.1}{\ignorespaces Incremental Wavefront Frontier Detector (WFD-INC)\relax }}{46}
-\contentsline {algorithm}{\numberline {6.2}{\ignorespaces Incremental-Parallel Wavefront Frontier Detector (WFD-IP)\relax }}{47}
